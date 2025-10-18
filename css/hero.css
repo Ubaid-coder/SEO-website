@@ -1,0 +1,105 @@
+  #hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+
+  }
+
+  #hero h1 {
+      font-size: 3rem;
+  }
+
+  .hero-image{
+    background: url(../hero-section-image.jpg);
+    height: 100%;
+    width: 100%;
+    background-position: 35%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .hero-image::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #0808081c;
+  }
+
+
+
+  .hero-content {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+  }
+
+  
+  .word-animate span {
+      display: inline-block;
+      padding-bottom: 5px;
+      color: #047981;
+    }
+    
+    .bookverse {
+        color: #ffffff !important;
+    }
+    
+  .explore {
+
+      padding: 1rem 5rem;
+      border-radius: 50px;
+      border: none;
+      font-size: 1.5rem;
+      border: 2px solid white;
+      color: white;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: color 0.5s ease-in;
+      background: #e0a306;
+
+
+  }
+
+
+  .explore::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+      background-color: #ffffff2d;
+      transition: all 0.4s ease-in;
+
+  }
+
+  .explore:hover::before {
+      transition: all 0.3s ease-in;
+      width: 100%;
+  }
+
+
+
+  @media (width < 768px) {
+      #hero h1 {
+          font-size: 2rem;
+          margin: 0 20px;
+      }
+
+      .word-animate span {
+          display: inline-block;
+          padding-bottom: 30px;
+      }
+  }
