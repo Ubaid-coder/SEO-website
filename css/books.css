@@ -1,3 +1,95 @@
-#books{
-    height: auto;
-}
+    #books {
+        background: linear-gradient(180deg, #000000d2, #575555e0);
+        height: 100%;
+
+
+    }
+
+    #books h2 {
+        padding-top: 20px;
+        text-align: center;
+        font-family: "BBH Sans Hegarty", sans-serif;
+        font-weight: 400;
+        font-style: italic;
+        font-size: 2.5rem;
+    }
+
+    .shelf {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: start;
+    }
+
+    .shelf-book {
+        height: 400px;
+        width: 300px;
+        position: relative;
+        overflow: hidden;
+        border: 15px solid #000000;
+        outline: 15px solid #ffffff;
+        border-top-right-radius: 10%;
+        border-bottom-right-radius: 20%;
+        margin: 10vh 10vw;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+    }
+
+    .shelf-book img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        position: relative;
+    }
+
+    .shelf-book:hover {
+        transition: linear 0.2s;
+        transform: translateY(-8px) scale(1.01) rotateZ(5deg);
+    }
+
+    #novels .shelf-book,
+    #fictional .shelf-book,
+    #nonfictional .shelf-book,
+    #religious .shelf-book {
+        margin: 10vh 5vw;
+    }
+
+    #novels,
+    #fictional,
+    #nonfictional,
+    #religious {
+        height: 100%;
+    }
+
+    #books p {
+        text-align: center;
+        font-family: "BBH Sans Hegarty", sans-serif;
+        font-weight: lighter;
+        font-style: italic;
+        font-size: 2rem;
+        padding-top: 20px;
+    }
+
+    #novels {
+        background: url(../novels/background-image-novel.jpeg);
+        background-position: center;
+        background-size: cover;
+
+    }
+
+    #fictional {
+        background: url(../fictional/background-fictional.jpeg);
+        background-position: center;
+        background-size: cover;
+    }
+
+    #nonfictional {
+        background: url(../nonfictional/background-nonfictional.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    #religious {
+        background: url(../religious/background-religious.jpg);
+        background-position: center;
+        background-size: cover;
+    }

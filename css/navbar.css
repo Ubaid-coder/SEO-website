@@ -23,6 +23,28 @@ b {
     justify-self: flex-start;
 }
 
+   li {
+        position: relative;
+    }
+
+
+    li::before {
+        position: absolute;
+        content: '';
+        bottom: -10px;
+        left: 0;
+        height: 25%;
+        border-radius: 100px;
+        width: 0%;
+        background-color: #047981;
+        transition: width 0.5s ease-in;
+    }
+
+    li:hover::before {
+        width: 100%;
+        transition: width 0.2s ease-in;
+    }
+
 .dropdown {
     display: none;
     position: absolute;
